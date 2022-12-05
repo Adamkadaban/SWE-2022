@@ -27,6 +27,7 @@ function Login() {
       name: details.name,
       email: details.email
     });
+    document.cookie = "username=" + details.name;
     }
     else {
     console.log("Details do not match!")
@@ -35,6 +36,7 @@ function Login() {
 
   const Logout = () => {
     setUser({ name: "", email: ""});
+    document.cookie = "username=";
     console.log("logout");
   }
 
